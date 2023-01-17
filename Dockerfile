@@ -20,4 +20,4 @@ RUN apk add tzdata && \
     chmod -R +x *.sh
 EXPOSE 65430
 VOLUME ["/speedtest/results"]
-ENTRYPOINT ["/bin/sh" "/speedtest/webgui.sh"]
+ENTRYPOINT ["/bin/sh", "/speedtest/webgui.sh"]
