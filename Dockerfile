@@ -17,7 +17,7 @@ COPY --from=tools /tool .
 RUN apk add tzdata && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     echo Asia/Shanghai > /etc/timezone && \
-    chmod -Rf 777 *
+    chmod -Rf 777 .
 EXPOSE 65430
 VOLUME ["/speedtest/results"]
 ENTRYPOINT ["/bin/sh", "/speedtest/webgui.sh"]
